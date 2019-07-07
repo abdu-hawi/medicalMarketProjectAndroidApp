@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginStart="5dp"
+    android:layout_marginEnd="5dp"
+    tools:context="com.example.hawi.medmarket.ItemDetailsActivity"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_above="@id/rlFav">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+            <com.android.volley.toolbox.NetworkImageView
+                  android:id="@+id/detail_img"
+                  android:layout_gravity="center"
+                  android:layout_marginTop="3dp"
+                  android:layout_width="300dp"
+                  android:layout_height="300dp"/>
+            <!-- Price -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Price: "
+                    android:textColor="#ff0000"
+                    android:textSize="16sp"/>
+                <TextView
+                    android:id="@+id/detail_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="25000 "
+                    android:textStyle="bold"
+                    android:textSize="16sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="SR / "
+                    android:textSize="16sp"/>
+                <TextView
+                    android:id="@+id/detail_unit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="ctn"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+            <!-- Shopping -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Shipping: "
+                    android:textColor="#ff0000"
+                    android:textSize="16sp"/>
+                <TextView
+                    android:id="@+id/detail_Shopping"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="25 "
+                    android:textStyle="bold"
+                    android:textSize="16sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="SR (Inside Jeddah and 35 SR in out)"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+            <!-- QTY -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/RLqty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Quantity: "
+                    android:textColor="#ff0000"
+                    android:layout_centerVertical="true"
+                    android:textSize="16sp"/>
+                <EditText
+                    android:id="@+id/detail_order_qyt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:ems="5"
+                    android:text="1"
+                    android:gravity="center"
+                    android:layout_toEndOf="@id/RLqty"
+                    android:layout_centerVertical="true"
+                    android:inputType="numberSigned" />
+                <TextView
+                    android:id="@+id/rlAv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_toEndOf="@id/detail_order_qyt"
+                    android:layout_centerVertical="true"
+                    android:text="( Available: "
+                    android:textSize="14sp"/>
+                <TextView
+                    android:id="@+id/detail_qty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_toEndOf="@id/rlAv"
+                    android:layout_centerVertical="true"
+                    android:text="25000 "
+                    android:textSize="14sp"/>
+                <TextView
+                    android:id="@+id/rlSp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_toEndOf="@id/detail_qty"
+                    android:layout_centerVertical="true"
+                    android:text=" "
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:id="@+id/detail_unitQTY"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_toEndOf="@id/rlSp"
+                    android:layout_centerVertical="true"
+                    android:text="ctn"
+                    android:textSize="14sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_toEndOf="@id/detail_unitQTY"
+                    android:layout_centerVertical="true"
+                    android:text=" )"
+                    android:textSize="14sp"/>
+            </RelativeLayout>
+            <!-- Shopping -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Total Price: "
+                    android:textColor="#ff0000"
+                    android:textSize="16sp"/>
+                <TextView
+                    android:id="@+id/detail_ord_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="25 "
+                    android:textStyle="bold"
+                    android:textSize="16sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text=" SR"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/detail_btn_show_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DETAILS"
+                />
+
+            <TextView
+                android:id="@+id/detail_desc"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="16sp"
+                android:text="" />
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/rlFav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="3dp"
+        android:gravity="center"
+        android:layout_alignParentBottom="true">
+        <Button
+            android:id="@+id/detail_btnBuy"
+            android:layout_alignParentStart="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorOrange"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="2dp"
+            android:textColor="@color/colorWhite"
+            android:textSize="16sp"
+            android:text="Buy Now"/>
+        <Button
+            android:id="@+id/detail_btnShip"
+            android:layout_toEndOf="@id/detail_btnBuy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorFire"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="2dp"
+            android:paddingEnd="5dp"
+            android:paddingStart="5dp"
+            android:textColor="@color/colorWhite"
+            android:textSize="16sp"
+            android:text="@string/add_to_cart"/>
+        <Button
+            android:id="@+id/detail_addToWish"
+            android:layout_toEndOf="@id/detail_btnShip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorRed"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="2dp"
+            android:paddingEnd="5dp"
+            android:paddingStart="5dp"
+            android:textColor="@color/colorWhite"
+            android:textSize="16sp"
+            android:text="@string/add_to_wish_list"/>
+    </RelativeLayout>
+
+</RelativeLayout>

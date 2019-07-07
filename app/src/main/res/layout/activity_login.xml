@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.hawi.medmarket.LoginActivity"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true">
+        <TextView
+            android:id="@+id/loginAlert"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/colorRed"
+            android:gravity="center"
+            android:textSize="16dp"/>
+        <EditText
+            android:id="@+id/loginPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Write Your Phone: 05XXXXXXXX"
+            android:layout_marginBottom="2dp"
+            android:inputType="phone"/>
+        <EditText
+            android:id="@+id/loginPass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Write Your Password"
+            android:layout_marginBottom="2dp"
+            android:inputType="textPassword"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorWhite"
+            android:background="@color/colorHealthBlue"
+            android:textSize="18sp"
+            android:onClick="btnLogin"
+            android:layout_marginTop="15dp"
+            android:text="Login"/>
+        <TextView
+            android:layout_marginTop="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorHealthGreen3"
+            android:onClick="btnTxtReg"
+            android:gravity="center"
+            android:text="IF YOU DO NOT HAVE ACCOUNT PLEASE CLICK HERE"/>
+    </LinearLayout>
+
+
+</RelativeLayout>

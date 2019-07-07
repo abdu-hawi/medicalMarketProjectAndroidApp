@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.hawi.medmarket.ConfirmActivity"
+    android:background="@color/colorWhite"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <TextView
+        android:layout_alignParentTop="true"
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingTop="5dp"
+        android:textStyle="bold"
+        android:textColor="@color/colorRed"
+        android:textSize="@dimen/sp18"
+        android:text="@string/purchase_order"/>
+    <TextView
+        android:id="@+id/text1"
+        android:layout_below="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingBottom="5dp"
+        android:textColor="@color/colorBlack"
+        android:textSize="16sp"
+        android:text="Please take sure from all information in this form"/>
+
+    <ScrollView
+        android:id="@+id/scrollTable"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/payFav"
+        android:layout_below="@id/text1">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- SCROLL VIEW FOR TABLE -->
+            <RelativeLayout
+                android:id="@+id/rlScroll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <TableLayout
+                    android:id="@+id/t1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorWhite"
+                        android:background="@color/colorHealthBlue"
+                        android:paddingBottom="2dp"
+                        android:gravity="center"
+                        android:text="@string/description_of_the_order_list" />
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp"
+                        android:background="@drawable/conf_head_item">
+
+                        <TextView
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorWhite"
+                            android:layout_marginStart="2dp"
+                            android:gravity="start"
+                            android:text="@string/description" />
+
+                        <TextView
+                            android:id="@+id/textView3"
+                            android:layout_width="40dp"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorWhite"
+                            android:layout_marginStart="2dp"
+                            android:gravity="center"
+                            android:text="@string/qty" />
+                        <TextView
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorWhite"
+                            android:layout_marginStart="2dp"
+                            android:gravity="center"
+                            android:text="@string/unit" />
+                        <TextView
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:textColor="@color/colorWhite"
+                            android:layout_marginStart="2dp"
+                            android:text="@string/price" />
+                        <TextView
+                            android:layout_width="90dp"
+                            android:gravity="center"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorWhite"
+                            android:layout_marginStart="2dp"
+                            android:text="@string/total" />
+                    </TableRow>
+
+                </TableLayout>
+
+
+            </RelativeLayout>
+            <!-- END SCROLL VIEW FOR TABLE -->
+
+            <!-- SHIP CITY -->
+            <RelativeLayout
+                android:id="@+id/rlShipCity"
+                android:layout_below="@id/rlScroll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:background="@color/colorGrey"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/confShipCity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toStartOf="@id/confShipPrice"
+                    android:textColor="@color/genre"
+                    android:textSize="@dimen/sp16"
+                    android:textStyle="bold"
+                    android:text="@string/shipping_price_inside_jeddah"/>
+                <TextView
+                    android:id="@+id/confShipPrice"
+                    android:layout_toStartOf="@id/billspace"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/genre"
+                    android:textSize="@dimen/sp16"
+                    android:textStyle="bold"
+                    android:text="25"/>
+                <TextView
+                    android:id="@+id/billspace"
+                    android:layout_toStartOf="@id/billSsr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" "/>
+                <TextView
+                    android:id="@+id/billSsr"
+                    android:layout_alignParentEnd="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/genre"
+                    android:textSize="@dimen/sp16"
+                    android:textStyle="bold"
+                    android:text="@string/SR"/>
+            </RelativeLayout>
+            <!-- END SHIP CITY -->
+
+            <!-- Tot Amt -->
+            <LinearLayout
+                android:id="@+id/llTotAmt"
+                android:layout_below="@id/rlShipCity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="end"
+                android:background="@drawable/conf_head_item">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:gravity="end"
+                    android:text="@string/tot_amt"
+                    android:textColor="#ff0000"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/confTotAmt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:textColor="@color/colorWhite"
+                    android:text="120,000,000"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:textColor="@color/colorWhite"
+                    android:layout_marginStart="2dp"
+                    android:text="@string/SR"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+            <!-- END Tot Amt -->
+
+            <!-- Recipient detail -->
+            <TextView
+                android:id="@+id/txtRecpint"
+                android:layout_below="@id/llTotAmt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="@color/colorWhite"
+                android:background="@color/colorHealthBlue"
+                android:layout_marginTop="10dp"
+                android:paddingBottom="2dp"
+                android:gravity="center"
+                android:text="@string/full_recipient_address" />
+            <!-- End recipient detail -->
+
+            <!-- Recipient Name -->
+            <LinearLayout
+                android:id="@+id/rlRName"
+                android:layout_below="@id/txtRecpint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:gravity="start"
+                    android:text="@string/recipient_name" />
+
+                <TextView
+                    android:id="@+id/confName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_marginStart="2dp"
+                    android:textColor="@color/colorBlack" />
+
+            </LinearLayout>
+
+            <!-- Recipient mobile -->
+            <LinearLayout
+                android:id="@+id/rlRmobile"
+                android:layout_below="@id/rlRName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:gravity="start"
+                    android:text="@string/recipient_mobile" />
+
+                <TextView
+                    android:id="@+id/confMobile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorBlack"
+                    android:layout_marginStart="2dp" />
+            </LinearLayout>
+
+            <!-- Recipient contry -->
+            <LinearLayout
+                android:id="@+id/rlRcountry"
+                android:layout_below="@id/rlRmobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:gravity="start"
+                    android:text="@string/recipient_country" />
+
+                <TextView
+                    android:id="@+id/confCountry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorBlack"
+                    android:layout_marginStart="2dp" />
+            </LinearLayout>
+
+            <!-- Recipient city -->
+            <LinearLayout
+                android:id="@+id/rlRcity"
+                android:layout_below="@id/rlRcountry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:gravity="start"
+                    android:text="@string/recipient_city" />
+
+                <TextView
+                    android:id="@+id/confCity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorBlack"
+                    android:layout_marginStart="2dp" />
+            </LinearLayout>
+
+            <!-- Recipient address -->
+            <LinearLayout
+                android:id="@+id/rlRadd"
+                android:layout_below="@id/rlRcity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:gravity="start"
+                    android:text="@string/recipient_address" />
+
+                <TextView
+                    android:id="@+id/confAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorBlack"
+                    android:layout_marginStart="2dp" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+    <!-- Bottom -->
+    <RelativeLayout
+        android:id="@+id/payFav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="3dp"
+        android:gravity="center"
+        android:layout_alignParentBottom="true">
+        <Button
+            android:id="@+id/bill_btnBuy"
+            android:layout_alignParentStart="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorHealthGreen1"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="5dp"
+            android:textColor="@color/colorWhite"
+            android:textSize="16sp"
+            android:paddingEnd="5dp"
+            android:paddingStart="5dp"
+            android:onClick="snedAllData"
+            android:text="@string/confirm_bill"/>
+        <Button
+            android:layout_toEndOf="@id/bill_btnBuy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorFire"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="2dp"
+            android:textColor="@color/colorWhite"
+            android:textSize="16sp"
+            android:paddingEnd="5dp"
+            android:paddingStart="5dp"
+            android:onClick="backToMarket"
+            android:text="@string/back_to_market"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

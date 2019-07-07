@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGreen"
+    tools:context="com.example.hawi.medmarket.ThanksPaymentActivity">
+
+    <LinearLayout
+        android:id="@+id/ll1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_above="@id/llb"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="40dp"
+        android:layout_marginStart="40dp"
+        android:gravity="center">
+        <TextView
+            android:id="@+id/thank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp18"
+            android:textColor="@color/colorBlack"
+            android:paddingBottom="2dp"
+            android:paddingTop="2dp"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/thankOrdNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp18"
+            android:textColor="@color/colorRed"
+            android:paddingBottom="2dp"
+            android:paddingTop="2dp"
+            android:gravity="center"
+            android:text=""/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llb"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="60dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorHealthGreen3"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/sp18"
+            android:onClick="thankBtnClick"
+            android:text="@string/back_to_market"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

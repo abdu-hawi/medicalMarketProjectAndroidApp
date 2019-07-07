@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#009fe3</color>
+    <color name="colorPrimaryDark">#5778ba</color>
+    <color name="colorAccent">#4cd0a9</color>
+    <color name="colorGreen">#D6FFD4</color>
+    <color name="colorWhite">#fff</color>
+    <color name="colorOrange">#fd9729</color>
+    <color name="colorFire">#ff5301</color>
+    <color name="colorRed">#d00404</color>
+    <color name="colorHealthBlue">#009fe3</color>
+    <color name="colorHealthBlue1">#5390bd</color>
+    <color name="colorHealthBlue2">#5aacba</color>
+    <color name="colorHealthBlue3">#5778ba</color>
+    <color name="colorHealthGreen">#a2c615</color>
+    <color name="colorHealthGreen1">#1e9c39</color>
+    <color name="colorHealthGreen2">#84c227</color>
+    <color name="colorHealthGreen3">#196926</color>
+    <color name="colorPink">#f9d2d2</color>
+
+
+
+    <color name="genre">#666666</color>
+    <color name="year">#888888</color>
+    <color name="list_divider">#d9d9d9</color>
+    <color name="list_row_hover_start_color">#ebeef0</color>
+    <color name="list_row_hover_end_color">#ebeef0</color>
+    <color name="colorGrey">#dbdbdb</color>
+    <color name="colorInv">#24b9a4</color>
+    <color name="colorInvDark">#188a7a</color>
+    <color name="colorBlack">#000000</color>
+
+</resources>

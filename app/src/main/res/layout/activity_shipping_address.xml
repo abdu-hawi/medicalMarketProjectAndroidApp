@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.hawi.medmarket.ShippingAddressActivity"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true">
+        <TextView
+            android:id="@+id/payAlert"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/colorFire"
+            android:gravity="center"
+            android:textSize="@dimen/sp16"/>
+        <CheckBox
+            android:id="@+id/payShipToJeddah"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorRed"
+            android:onClick="cbJeddahClick"
+            android:text="@string/ship_to_jeddah"
+            android:layout_marginBottom="5dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/recipient_name"/>
+        <EditText
+            android:id="@+id/payName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/write_your_name"
+            android:layout_marginBottom="3dp"
+            android:inputType="text"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/recipient_mobile"/>
+        <EditText
+            android:id="@+id/payMobile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp"
+            android:inputType="text"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/recipient_country"/>
+        <EditText
+            android:id="@+id/payCountry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/saudi_arabia"
+            android:layout_marginBottom="3dp"
+            android:inputType="text"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/recipient_city"/>
+        <EditText
+            android:id="@+id/payCity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/jeddah"
+            android:layout_marginBottom="3dp"
+            android:inputType="text"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/recipient_address"/>
+        <EditText
+            android:id="@+id/payAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp"
+            android:ems="10"
+            android:inputType="textMultiLine"/>
+
+        <CheckBox
+            android:id="@+id/paySaveAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/save_address" />
+
+
+    </LinearLayout>
+
+    <!-- Bottom -->
+    <RelativeLayout
+        android:id="@+id/payFav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="3dp"
+        android:gravity="center"
+        android:layout_alignParentBottom="true">
+        <Button
+            android:id="@+id/pay_btnBuy"
+            android:layout_alignParentStart="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorHealthGreen1"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="2dp"
+            android:textColor="@color/colorWhite"
+            android:textSize="16sp"
+            android:paddingEnd="5dp"
+            android:paddingStart="5dp"
+            android:onClick="btnClick"
+            android:text="@string/continue_payment"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

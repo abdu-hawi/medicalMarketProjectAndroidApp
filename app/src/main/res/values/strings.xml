@@ -1,0 +1,53 @@
+<resources>
+    <string name="app_name">Med Market</string>
+    <string name="btn_disable">Add items to cart</string>
+    <string name="btn_enable">Click to continue payment</string>
+    <string name="del_from_wish_list">Delete From Wish List</string>
+    <string name="add_to_wish_list">Add To Wish List</string>
+    <string name="del_from_cart">Delete From Cart</string>
+    <string name="add_to_cart">Add To Cart</string>
+    <string name="continue_payment">Continue payment</string>
+    <string name="save_address">Save address</string>
+    <string name="recipient_address">The recipient\'s Address</string>
+    <string name="jeddah">Jeddah</string>
+    <string name="recipient_city">The recipient\'s City</string>
+    <string name="saudi_arabia">Saudi Arabia</string>
+    <string name="recipient_country">The recipient\'s Country</string>
+    <string name="recipient_mobile">The recipient\'s mobile number</string>
+    <string name="write_your_name">Write Your Name</string>
+    <string name="recipient_name">The recipient\'s name: </string>
+    <string name="ship_to_jeddah">Shipping inside Jeddah</string>
+    <string name="all_field_are_required">All field are required</string>
+    <string name="please_fill_required_field">Please fill required fields</string>
+
+    <string name="sr.">Sr.</string>
+    <string name="description">Description</string>
+    <string name="qty">QTY</string>
+    <string name="unit">Unit</string>
+    <string name="price">Price</string>
+    <string name="total">Total</string>
+    <string name="tot_amt">Total Amount: </string>
+    <string name="SR">  SR</string>
+    <string name="confirm_bill">Confirm bill</string>
+    <string name="back_to_market">Back to market</string>
+    <string name="shipping_price_inside_jeddah">SHIPPING PRICE INSIDE JEDDAH: </string>
+    <string name="shipping_price_outside_jeddah">SHIPPING PRICE OUTSIDE JEDDAH: </string>
+    <string name="click_here_if_you_want_change_city">CLICK HERE IF YOU WANT CHANGE CITY</string>
+    <string name="purchase_order">PURCHASE ORDER</string>
+    <string name="description_of_the_order_list">Description of the order list</string>
+    <string name="full_recipient_address">Recipient address</string>
+    <string name="thank_you">THANK YOU (</string>
+    <string name="to_payment_with_us_your_order_number_is"> )TO PAYMENT WITH US YOUR ORDER NUMBER IS: </string>
+    <string name="title_activity_main">MainActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="cart_list">Cart list</string>
+    <string name="wish_list">Wish list</string>
+    <string name="shopping_cart">Shopping cart</string>
+    <string name="procurement_list">Procurement List</string>
+    <string name="user_setting">User setting</string>
+    <string name="logout">Logout</string>
+    <string name="settings">Settings</string>
+</resources>
